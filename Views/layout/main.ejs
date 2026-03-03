@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src = "/scripts/navbar.js"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gradient-to-br from-indigo-100 via-white to-indigo-200">
+    <div><%- include('../include/navbar.ejs') %></div>
+    <main class="flex-grow flex items-center justify-center px-4">
+         <%- body %>
+    </main>
+    <div><%- include('../include/footer.ejs') %></div>
+</body>
+</html>

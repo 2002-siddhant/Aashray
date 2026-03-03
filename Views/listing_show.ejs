@@ -1,0 +1,58 @@
+<div class="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 py-12 px-6">
+
+  <h1 class="text-4xl font-bold text-center mb-12 text-gray-800">
+    Explore Beautiful Homes 🏡
+  </h1>
+
+  <div class="max-w-7xl mx-auto grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+    <% for(let list of listing) { %>
+
+      <div class="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+
+        <!-- Image -->
+        <% if (list.image && list.image.url) { %>
+          <div class="aspect-[16/9] overflow-hidden">
+            <img 
+              src="<%= list.image.url %>" 
+              alt="Listing Image"
+              class="w-full h-full object-cover hover:scale-110 transition duration-500"
+            >
+          </div>
+        <% } %>
+
+        <!-- Content -->
+        <div class="p-6 space-y-3">
+
+          <h2 class="text-xl font-bold text-gray-800">
+            <%= list.title %>
+          </h2>
+
+          <p class="text-gray-500 text-sm line-clamp-2">
+            <%= list.description %>
+          </p>
+
+          <div class="flex justify-between items-center pt-3">
+
+            <span class="text-indigo-600 font-semibold text-lg">
+              ₹ <%= list.price %>
+            </span>
+
+            <a 
+              href="/listings/<%= list._id %>" 
+              class="bg-indigo-600 text-white px-4 py-2 rounded-xl text-sm hover:bg-indigo-700 transition"
+            >
+              View →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    <% } %>
+
+  </div>
+
+</div>
