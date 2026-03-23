@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require("express");
 const connect = require("./connection.js");
 connect()
+const port = 8080 || 3000
 const app = express();
 const methodoverride = require("method-override")
 const path = require("path")
@@ -57,7 +58,7 @@ app.get('/',(req,res)=>{
 app.use('/listings',listing_route);
 app.use('/listings/:id',review_route);
 app.use('/',user_route);
-app.listen(8080,()=>{
+app.listen(port,()=>{
     console.log("app is listening on port",8080);
 });
 app.use((err,req,res,next)=>{
