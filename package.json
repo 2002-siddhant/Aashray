@@ -1,15 +1,15 @@
 {
   "engines":{
-    "node":"22.13.1"
+    "node":">=18"
   },
   "name": "aashray",
   "version": "1.0.0",
-  "description": "\"An airbnb type website\"",
+  "description": "An airbnb type website",
   "main": "index.js",
   "scripts": {
     "start":"node index.js"
   },
-  "author": "\"Siddhant Mishra:",
+  "author": "Siddhant Mishra",
   "license": "ISC",
   "dependencies": {
     "cloudinary": "^1.41.0",
